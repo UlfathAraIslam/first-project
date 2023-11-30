@@ -13,6 +13,10 @@ app.use(cors());
 app.use('/api/v1/students', StudentRoutes);
 
 const getAController = (req: Request, res: Response) => {
+  res.status(200).json({
+    success: true,
+    message: 'Welcome to the api of first project'
+  })
   const a = 10;
   res.send(a);
 };
